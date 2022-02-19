@@ -1,3 +1,5 @@
+// npm i fs
+const fs = require('fs');
 // Instalación de: npm i @truffle/hdwallet-provider
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 // Clave secreta: 12 palabras de la Wallet
@@ -25,18 +27,18 @@ module.exports = {
 
     // Polygon: MATIC
     // Necesitamos una cuenta en: https://rpc.maticvigil.com/
-    // ID: https://rpc-mumbai.maticvigil.com/v1/99a99d15ac2ad3b526aa97401fdbe30ee724ba38
+    // ID: https://rpc-mumbai.maticvigil.com/v1/5a211f3a3fb8d4110887e0eeae262a4bd36c2774
     matic : {
-      provider: () => new HDWalletProvider(mnemonic, "https://rpc-mumbai.maticvigil.com/v1/99a99d15ac2ad3b526aa97401fdbe30ee724ba38"),
+      provider: () => new HDWalletProvider(mnemonic, "https://rpc-mumbai.maticvigil.com/v1/5a211f3a3fb8d4110887e0eeae262a4bd36c2774"),
       network_id: 80001,
       confirmations: 2,
       timeoutBlocks: 200,
       skipDryRun: true,
     },
     
-    // Rinkeby 
+    // Rinkeby: https://infura.io/dashboard/ethereum/2cf64f38e4234f1fb073bdc5f9e1b875/settings
     rinkeby : {
-      provider: () => new HDWalletProvider(mnemonic, "https://rinkeby.infura.io/v3/d2275b005f7f48cca3cbde70c8a5c2cc"),
+      provider: () => new HDWalletProvider(mnemonic, "https://rinkeby.infura.io/v3/2cf64f38e4234f1fb073bdc5f9e1b875"),
       network_id: 4,
       gas: 4500000,
       gasPrice: 10000000000,
